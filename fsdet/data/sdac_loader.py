@@ -12,6 +12,10 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
     images_dir = os.path.join(dirname, "images")
 
     is_shots = "shot" in name
+    image_limit = -1
+    if "image" in name:
+        image_limit = int(name.split("image")[0].split("_")[-1])
+        print(f"Image limit: {image_limit}")
 
     shots = name.split("_")[-1].split("shot")[0] if is_shots else -1
     if shots:
@@ -20,8 +24,7 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
     shot_count = {}
     
     # Loop through all files in dirname 
-    for filename in os.listdir(annotations_dir):
-        print(filename)
+    for filename in os.listdir(annotations_dir):        
         if filename.endswith(".xml") and not filename.startswith("."):
             # Load xml file
             tree = ET.parse(os.path.join(annotations_dir, filename))
@@ -56,7 +59,7 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
 
                     category_id = thing_classes.index(obj.find("name").text)
 
-                    if is_shots and shot_count.get(category_id, 0) >= shots:
+                    if shot_count.get(category_id, 0) >= shots:
                         break
 
                     shot_count[category_id] = shot_count.get(category_id, 0) + 1
@@ -70,6 +73,9 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
                     )
             annotation['annotations'] = bboxes
             data.append(annotation)
+
+            if len(data) >= image_limit and image_limit != -1:
+                break
     return data
 
 def register_meta_sdac(name, metadata, dirname, split, keepclasses):
@@ -100,7 +106,7 @@ if __name__ == "__main__":
 
     # Test output of sdac_loader, not used in the actual training/finetuning
     
-    data = load_filtered_sdac_dataset('sdac_train_1shot', 'datasets/small_img', [
+    data = load_filtered_sdac_dataset('sdac_train_3images_1shot', 'datasets/sdac/small_img', [
         "ASR_Ansaugoeffnung", "ASR_Ansaugrauchmelder", "Ambulanz_Pendelleuchte_LED", "Aufbaurundleuchte_LED_Treppenhaus", "Ausschalter", "Ausschalter_beleuchtet", "Buero_Pendelleuchten_LED",
         "CEE_Drehstrom_Steckdose_16_32_A", "DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm", "Datenanschluss_einfach", "Datenanschluss_zweifach", "Downlight_LED_Einbauleuchten_Flur",
         "Downlight_LED_Einbauleuchten_Flur_2", "Einbaudownlights_LED_Konferenzraeume", "Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V", "Elektroanschluss_allgemein_400V_Geraeteanschlussdose_400V",
@@ -112,5 +118,5 @@ if __name__ == "__main__":
     print(data)
 
     # Save data to json file
-    with open('sdac_train_1shot.json', 'w') as f:
+    with open('sdac_train_3images_1shot.json', 'w') as f:
         json.dump(data, f, indent=4)

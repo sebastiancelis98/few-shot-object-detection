@@ -269,12 +269,18 @@ def register_all_pascal_voc(root="datasets"):
 def register_all_sdac_datasets(root="datasets"):
     
     METASPLITS = [
-        ("sdac_train_all", "small_img", "train", "base_novel"),
-        ("sdac_test_all", "small_img", "test", "base_novel"),
-        ("sdac_train_base", "small_img", "train", "base"),
-        ("sdac_test_base", "small_img", "test", "base"),
-        ("sdac_train_all_1shot", "small_img", "train", "base_novel"),
-        ("sdac_test_novel", "small_img", "test", "novel"),
+        ("sdac_train_10images_all", "sdac/small_img", "train", "base_novel"),
+        ("sdac_train_10images_base", "sdac/small_img", "train", "base"),
+        ("sdac_train_10images_novel", "sdac/small_img", "train", "novel"),
+
+        ("sdac_train_all", "sdac/small_img", "train", "base_novel"),
+        ("sdac_test_all", "sdac/small_img_test", "test", "base_novel"),
+
+        ("sdac_train_base", "sdac/small_img", "train", "base"),
+        ("sdac_test_base", "sdac/small_img_test", "test", "base"),
+        
+        ("sdac_train_all_1shot", "sdac/small_img", "train", "base_novel"),
+        ("sdac_test_novel", "sdac/small_img_test", "test", "novel"),
     ]
 
     for name, dirname, split, keepclasses in METASPLITS:

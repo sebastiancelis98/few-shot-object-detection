@@ -22,7 +22,7 @@ class SDACEvaluator(DatasetEvaluator):
         # add this two terms for calculating the mAP of different subset
         self._base_classes = meta.base_classes
         self._novel_classes = meta.novel_classes
-        self._cpu_device = torch.device("cpu") if torch.cuda.is_available() else torch.device("cpu")  # TODO gpu doesn't work yet
+        self._cpu_device = torch.device("cpu")
         self._logger = logging.getLogger(__name__)
 
     def reset(self): # reset predictions
@@ -193,7 +193,6 @@ def sdac_eval(
     classname,
     ovthresh=0.5
 ): 
-    print(f'Evaluating {classname} with threshold: {ovthresh}...')
     imagenames = []
     image_ids = []
     # load annots
@@ -222,8 +221,6 @@ def sdac_eval(
     with open(detfile, "r") as f:
         lines = f.readlines()
     
-    print(class_recs)
-
     splitlines = [x.strip().split(" ") for x in lines]
     image_ids = [x[0].split(".")[0] for x in splitlines]
     confidence = np.array([float(x[1]) for x in splitlines])
@@ -236,16 +233,11 @@ def sdac_eval(
     BB = BB[sorted_ind, :]
     image_ids = [image_ids[x] for x in sorted_ind]
 
-    print(BB)
-    print(image_ids)
-    print(imagenames)
-
     # go down dets and mark TPs and FPs
     nd = len(image_ids)
     tp = np.zeros(nd)
     fp = np.zeros(nd)
     for d in range(nd):
-        print("-----")
         R = class_recs[image_ids[d]]
         bb = BB[d, :].astype(float)
         ovmax = -np.inf
