@@ -15,8 +15,9 @@ You may want to write your own script with your datasets and other customization
 """
 
 import os
-
+import torch
 import detectron2.utils.comm as comm
+
 from detectron2.checkpoint import DetectionCheckpointer
 from detectron2.data import MetadataCatalog
 from detectron2.engine import launch
@@ -30,6 +31,7 @@ from fsdet.evaluation import (
     PascalVOCDetectionEvaluator,
     verify_results,
 )
+from fsdet.evaluation.sdac_evaluation import SDACEvaluator
 
 
 class Trainer(DefaultTrainer):
@@ -60,6 +62,9 @@ class Trainer(DefaultTrainer):
             return PascalVOCDetectionEvaluator(dataset_name)
         if evaluator_type == "lvis":
             return LVISEvaluator(dataset_name, cfg, True, output_folder)
+        if evaluator_type == "sdac":
+            return SDACEvaluator(dataset_name)
+        
         if len(evaluator_list) == 0:
             raise NotImplementedError(
                 "no Evaluator for the dataset {} with the type {}".format(

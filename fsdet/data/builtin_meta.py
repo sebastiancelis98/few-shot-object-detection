@@ -375,6 +375,20 @@ PASCAL_VOC_BASE_CATEGORIES = {
     ],
 }
 
+SDAC_BASE_CLASSES = ["ASR_Ansaugoeffnung", "ASR_Ansaugrauchmelder", "Ambulanz_Pendelleuchte_LED", "Aufbaurundleuchte_LED_Treppenhaus", "Ausschalter", "Ausschalter_beleuchtet", "Buero_Pendelleuchten_LED",
+    "CEE_Drehstrom_Steckdose_16_32_A", "DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm", "Datenanschluss_einfach", "Datenanschluss_zweifach", "Downlight_LED_Einbauleuchten_Flur",
+    "Downlight_LED_Einbauleuchten_Flur_2", "Einbaudownlights_LED_Konferenzraeume", "Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V", "Elektroanschluss_allgemein_400V_Geraeteanschlussdose_400V",
+    "Fluchtwegpiktogramm", "Gegensprechanlage_mit_Video", "KFO_Kamera_mit_Festobjektiv", "NAM-Nichtautomatischer_Melder", "Notlichtbaustein_in_Allgemeinbeleuchtug_engebaut_Einbau_(1UG_und_2UG_Aufbauvariante)",
+    "OKW_Multisensormelder_(Kombination_optischer_Rauch-Kahlenmonoxid_Waerme-Melder)", "OT_Multisensormelder_(Kombination_RMO_WMD)", "RMO_Rauchmelder_optischer", "ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)"]
+
+SDAC_NOVEL_CLASSES = [
+    
+    "Ruf-und_Abstelltaster", "Scheinwerfer_fuer_Alarmbeleuchtung", "Schukosteckdose_einfach", "Schukosteckdose_mehrfach", "Serienschalter", "Sicherheitsleuchte_Wandeinbau", "Taster", "Taster_beleuchtet",
+    "WLAN", "Wechselschalter", "ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm", "Zentrale_Sicherheitsbeleuchtung", "Zimmersignalleuchte", "Zugtaster"
+]
+
+SDAC_ALL_CLASSES = SDAC_BASE_CLASSES + SDAC_NOVEL_CLASSES
+
 
 def _get_coco_instances_meta():
     thing_ids = [k["id"] for k in COCO_CATEGORIES if k["isthing"] == 1]
@@ -454,8 +468,15 @@ def _get_pascal_voc_fewshot_instances_meta():
     }
     return ret
 
+def _get_sdac_instances_meta():
+    ret = {
+        "thing_classes": SDAC_ALL_CLASSES,
+        "novel_classes": SDAC_NOVEL_CLASSES,
+        "base_classes": SDAC_BASE_CLASSES,
+    }
+    return ret
 
-def _get_builtin_metadata(dataset_name):
+def get_builtin_metadata(dataset_name):
     if dataset_name == "coco":
         return _get_coco_instances_meta()
     elif dataset_name == "coco_fewshot":
@@ -466,4 +487,7 @@ def _get_builtin_metadata(dataset_name):
         return _get_lvis_fewshot_instances_meta_v0_5()
     elif dataset_name == "pascal_voc_fewshot":
         return _get_pascal_voc_fewshot_instances_meta()
+    elif dataset_name == "sdac_dataset":
+        return _get_sdac_instances_meta()
+    
     raise KeyError("No built-in metadata for dataset {}".format(dataset_name))

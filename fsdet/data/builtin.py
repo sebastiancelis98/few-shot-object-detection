@@ -16,10 +16,11 @@ import os
 from detectron2.data import MetadataCatalog
 from detectron2.data.datasets.lvis import register_lvis_instances
 
-from .builtin_meta import _get_builtin_metadata
+from .builtin_meta import get_builtin_metadata
 from .meta_coco import register_meta_coco
 from .meta_lvis import register_meta_lvis
 from .meta_pascal_voc import register_meta_pascal_voc
+from .sdac_loader import register_meta_sdac
 
 # ==== Predefined datasets and splits for COCO ==========
 
@@ -74,7 +75,7 @@ def register_all_coco(root="datasets"):
     #         # Assume pre-defined datasets live in `./datasets`.
     #         register_coco_instances(
     #             key,
-    #             _get_builtin_metadata(dataset_name),
+    #             get_builtin_metadata(dataset_name),
     #             os.path.join(root, json_file)
     #             if "://" not in json_file
     #             else json_file,
@@ -109,7 +110,7 @@ def register_all_coco(root="datasets"):
     for name, imgdir, annofile in METASPLITS:
         register_meta_coco(
             name,
-            _get_builtin_metadata("coco_fewshot"),
+            get_builtin_metadata("coco_fewshot"),
             os.path.join(root, imgdir),
             os.path.join(root, annofile),
         )
@@ -151,7 +152,7 @@ def register_all_lvis(root="datasets"):
             # Assume pre-defined datasets live in `./datasets`.
             register_lvis_instances(
                 key,
-                _get_builtin_metadata(dataset_name),
+                get_builtin_metadata(dataset_name),
                 os.path.join(root, json_file)
                 if "://" not in json_file
                 else json_file,
@@ -177,7 +178,7 @@ def register_all_lvis(root="datasets"):
         dataset_name = "lvis_v0.5_fewshot" if "novel" in name else "lvis_v0.5"
         register_meta_lvis(
             name,
-            _get_builtin_metadata(dataset_name),
+            get_builtin_metadata(dataset_name),
             os.path.join(root, json_file)
             if "://" not in json_file
             else json_file,
@@ -249,11 +250,14 @@ def register_all_pascal_voc(root="datasets"):
                             (name, dirname, img_file, keepclasses, sid)
                         )
 
+    METASPLITS.append(("voc_2007_trainval_base1_1shot", "VOC2007", "trainval", "base1", 1))
+    METASPLITS.append(("voc_2007_test_base1_1shot", "VOC2007", "test", "base1", 1))
+
     for name, dirname, split, keepclasses, sid in METASPLITS:
         year = 2007 if "2007" in name else 2012
         register_meta_pascal_voc(
             name,
-            _get_builtin_metadata("pascal_voc_fewshot"),
+            get_builtin_metadata("pascal_voc_fewshot"),
             os.path.join(root, dirname),
             split,
             year,
@@ -262,8 +266,29 @@ def register_all_pascal_voc(root="datasets"):
         )
         MetadataCatalog.get(name).evaluator_type = "pascal_voc"
 
+def register_all_sdac_datasets(root="datasets"):
+    
+    METASPLITS = [
+        ("sdac_train_all", "small_img", "train", "base_novel"),
+        ("sdac_test_all", "small_img", "test", "base_novel"),
+        ("sdac_train_base", "small_img", "train", "base"),
+        ("sdac_test_base", "small_img", "test", "base"),
+        ("sdac_train_all_1shot", "small_img", "train", "base_novel"),
+        ("sdac_test_novel", "small_img", "test", "novel"),
+    ]
+
+    for name, dirname, split, keepclasses in METASPLITS:
+        register_meta_sdac(
+            name,
+            get_builtin_metadata("sdac_dataset"),
+            os.path.join(root, dirname),
+            split,
+            keepclasses,
+        )
+        MetadataCatalog.get(name).evaluator_type = "sdac"
 
 # Register them all under "./datasets"
 register_all_coco()
 register_all_lvis()
 register_all_pascal_voc()
+register_all_sdac_datasets()
