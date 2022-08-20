@@ -59,7 +59,7 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
 
                     category_id = thing_classes.index(obj.find("name").text)
 
-                    if shot_count.get(category_id, 0) >= shots:
+                    if is_shots and shot_count.get(category_id, 0) >= shots:
                         break
 
                     shot_count[category_id] = shot_count.get(category_id, 0) + 1
