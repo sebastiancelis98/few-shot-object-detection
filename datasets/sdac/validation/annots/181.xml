@@ -1,0 +1,36 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>1_18432x5632.jpg</filename>
+	<path>dataset/validation/images/1_181_18432x5632.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>RMO_Rauchmelder_optischer</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>207</xmin>
+			<ymin>375</ymin>
+			<xmax>295</xmax>
+			<ymax>505</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Datenanschluss_zweifach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>28</ymin>
+			<xmax>112</xmax>
+			<ymax>124</ymax>
+		</bndbox>
+	</object>
+</annotation>

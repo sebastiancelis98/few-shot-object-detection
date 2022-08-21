@@ -1,0 +1,25 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>2_8704x7680.jpg</filename>
+	<path>dataset/validation/images/2_296_8704x7680.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Buero_Pendelleuchten LED_transparent</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>113</xmin>
+			<ymin>302</ymin>
+			<xmax>450</xmax>
+			<ymax>646</ymax>
+		</bndbox>
+	</object>
+</annotation>

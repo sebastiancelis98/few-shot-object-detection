@@ -1,0 +1,36 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>1_4608x5120.jpg</filename>
+	<path>dataset/validation/images/1_81_4608x5120.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>RMO_Rauchmelder_optischer</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>158</xmin>
+			<ymin>107</ymin>
+			<xmax>291</xmax>
+			<ymax>234</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Aufbaurundleuchte_LED_Treppenhaus</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>84</xmin>
+			<ymin>338</ymin>
+			<xmax>287</xmax>
+			<ymax>471</ymax>
+		</bndbox>
+	</object>
+</annotation>

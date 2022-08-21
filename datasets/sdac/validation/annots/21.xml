@@ -1,0 +1,36 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>0_11776x9728.jpg</filename>
+	<path>dataset/validation/images/0_21_11776x9728.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>OKW_Multisensormelder_(Kombination_optischer_Rauch-Kahlenmonoxid_Waerme-Melder)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>18</xmin>
+			<ymin>192</ymin>
+			<xmax>148</xmax>
+			<ymax>314</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Sicherheitsleuchte_Wandeinbau_transparent</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>330</xmin>
+			<ymin>163</ymin>
+			<xmax>355</xmax>
+			<ymax>266</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>2_512x5632.jpg</filename>
+	<path>dataset/validation/images/2_185_512x5632.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Buero_Pendelleuchten LED_transparent</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>432</xmin>
+			<ymin>98</ymin>
+			<xmax>835</xmax>
+			<ymax>227</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Buero_Pendelleuchten LED_transparent</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>436</xmin>
+			<ymin>505</ymin>
+			<xmax>839</xmax>
+			<ymax>634</ymax>
+		</bndbox>
+	</object>
+</annotation>

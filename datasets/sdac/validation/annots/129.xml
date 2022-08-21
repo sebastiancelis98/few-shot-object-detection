@@ -1,0 +1,25 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>1_10752x6144.jpg</filename>
+	<path>dataset/validation/images/1_129_10752x6144.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Fluchtwegpiktogramm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>458</xmin>
+			<ymin>496</ymin>
+			<xmax>570</xmax>
+			<ymax>732</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -30,11 +30,19 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
             tree = ET.parse(os.path.join(annotations_dir, filename))
             root = tree.getroot()
             # Loop through all objects in xml file
-            img_filename = root.find("filename").text
+            img_filename = filename.split(".")[0] + ".jpg"
             # Check if img_filename exists
             if not os.path.exists(os.path.join(images_dir, img_filename)):
-                print(f"{img_filename} does not exist")
-                continue
+                img_filename = root.find("path").text.split("/")[-1]
+                if not os.path.exists(os.path.join(images_dir, img_filename)):
+                    print(f"{img_filename} does not exist in {images_dir}")
+                    continue
+            
+            if filename.split(".")[0] != img_filename.split(".")[0]:
+                # Rename image file to match xml file
+                new_img_filename = filename.split(".")[0] + ".jpg"
+                os.rename(os.path.join(images_dir, img_filename), os.path.join(images_dir, new_img_filename))
+                img_filename = new_img_filename
             
             annotation = {
                 "file_name": os.path.join(images_dir, img_filename),
@@ -47,8 +55,19 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
             bboxes = []
             for obj in root.findall("object"):
                 
-                # Check if object is in thing_classes
-                if obj.find("name").text in thing_classes:
+                obj_class = obj.find("name").text
+                possible_classes = [thing_class for thing_class in thing_classes if obj_class.startswith(thing_class)]
+                
+                if possible_classes:
+                    possible_classes.sort()
+                    probable_class = possible_classes[-1]
+
+                    if probable_class != obj_class:
+                        # Set obj name to probable class
+                        obj.find("name").text = probable_class
+                        # Save obj file
+                        tree.write(os.path.join(annotations_dir, filename))
+
                     # Get bounding box
                     bbox = obj.find("bndbox")
 
@@ -57,7 +76,7 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
                     xmax = int(bbox.find("xmax").text)
                     ymax = int(bbox.find("ymax").text)
 
-                    category_id = thing_classes.index(obj.find("name").text)
+                    category_id = thing_classes.index(probable_class)
 
                     if is_shots and shot_count.get(category_id, 0) >= shots:
                         break
@@ -71,6 +90,9 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
                             "bbox_mode": BoxMode.XYXY_ABS,
                         }
                     )
+            if not bboxes:
+                pass
+
             annotation['annotations'] = bboxes
             data.append(annotation)
 

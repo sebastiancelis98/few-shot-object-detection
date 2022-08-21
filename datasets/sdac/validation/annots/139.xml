@@ -1,0 +1,25 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>1_11776x8192.jpg</filename>
+	<path>dataset/validation/images/1_139_11776x8192.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Datenanschluss_zweifach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>138</xmin>
+			<ymin>182</ymin>
+			<xmax>211</xmax>
+			<ymax>278</ymax>
+		</bndbox>
+	</object>
+</annotation>

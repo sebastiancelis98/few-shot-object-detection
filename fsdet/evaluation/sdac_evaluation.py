@@ -71,7 +71,7 @@ class SDACEvaluator(DatasetEvaluator):
                 with open(res_file_template.format(cls_name), "w") as f:
                     f.write("\n".join(lines))
 
-                for thresh in range(50, 100, 5):
+                for thresh in range(20, 80, 5):
                     rec, prec, ap = sdac_eval(
                         res_file_template,
                         self._base_annotations_directory,
@@ -171,7 +171,7 @@ def parse_rec(filename):
 def sdac_ap(rec, prec) -> float:
 
     mrec = np.concatenate(([0.0], rec, [1.0]))
-    mpre = np.concatenate(([0.0], prec, [0.0]))
+    mpre = np.concatenate(([1.0], prec, [0.0]))
 
     for i in range(mpre.size - 1, 0, -1):
         mpre[i - 1] = np.maximum(mpre[i - 1], mpre[i])
@@ -206,11 +206,12 @@ def sdac_eval(
 
     # extract gt objects for this class
     class_recs = {}
-
+    npos = 0
     for image_id in image_ids:
         R = [obj for obj in recs[image_id] if obj["name"] == classname]
         bbox = np.array([x["bbox"] for x in R])
         det = [False] * len(R)
+        npos += len(R)
         class_recs[image_id] = {
             "bbox": bbox,
             "det": det,
@@ -278,10 +279,10 @@ def sdac_eval(
     # compute precision recall
     fp = np.cumsum(fp)
     tp = np.cumsum(tp)
-    rec = tp
+    recall = tp / np.maximum(npos, np.finfo(np.float64).eps)
     # avoid divide by zero in case the first detection matches a difficult
     # ground truth
-    prec = tp / np.maximum(tp + fp, np.finfo(np.float64).eps)
-    ap = sdac_ap(rec, prec)
-
-    return rec, prec, ap
+    precision = tp / np.maximum(tp + fp, np.finfo(np.float64).eps)
+    ap = sdac_ap(recall, precision)
+    
+    return recall, precision, ap

@@ -1,0 +1,25 @@
+<annotation>
+	<folder>dataset/validation/images</folder>
+	<filename>2_9216x2048.jpg</filename>
+	<path>dataset/validation/images/2_300_9216x2048.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Sicherheitsleuchte_Wandeinbau_transparent</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>22</xmin>
+			<ymin>188</ymin>
+			<xmax>104</xmax>
+			<ymax>264</ymax>
+		</bndbox>
+	</object>
+</annotation>
