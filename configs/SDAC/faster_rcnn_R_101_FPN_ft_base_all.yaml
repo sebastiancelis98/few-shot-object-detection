@@ -5,13 +5,7 @@ MODEL:
   RESNETS:
     DEPTH: 101
   ROI_HEADS:
-    NUM_CLASSES: 39
-    OUTPUT_LAYER: "CosineSimOutputLayers"
-    FREEZE_FEAT: True
-  BACKBONE:
-    FREEZE: True
-  PROPOSAL_GENERATOR:
-    FREEZE: True
+    NUM_CLASSES: 25
 INPUT:
   MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
   MIN_SIZE_TEST: 800
@@ -19,10 +13,10 @@ DATASETS:
   TRAIN: ('sdac_train_base',)
   TEST: ('sdac_test_base',)
 SOLVER:
-  IMS_PER_BATCH: 16
+  IMS_PER_BATCH: 8
   BASE_LR: 0.001
   STEPS: (36000, )
-  MAX_ITER: 40000
-  CHECKPOINT_PERIOD: 1000000
+  MAX_ITER: 50000
+  CHECKPOINT_PERIOD: 25000
   WARMUP_ITERS: 10
-OUTPUT_DIR: "checkpoints/sdac/faster_rcnn_R_101_FPN_ft_normalized_base"
+OUTPUT_DIR: "checkpoints/sdac/base_v03/"
