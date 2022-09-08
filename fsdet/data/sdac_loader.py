@@ -22,10 +22,9 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
         shots = int(shots)
 
     shot_count = {}
-    image_count = 0
     
     # Loop through all files in dirname 
-    for filename in os.listdir(annotations_dir):
+    for filename in os.listdir(annotations_dir):        
         if filename.endswith(".xml") and not filename.startswith("."):
             # Load xml file
             tree = ET.parse(os.path.join(annotations_dir, filename))
@@ -45,7 +44,17 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
                 os.rename(os.path.join(images_dir, img_filename), os.path.join(images_dir, new_img_filename))
                 img_filename = new_img_filename
             
+            annotation = {
+                "file_name": os.path.join(images_dir, img_filename),
+                "image_id": filename,
+                "width": int(root.findall("./size/width")[0].text),
+                "height": int(root.findall("./size/height")[0].text),
+                "id": len(data),
+                "annotations": [],
+            }
+            bboxes = []
             for obj in root.findall("object"):
+                
                 obj_class = obj.find("name").text
                 possible_classes = [thing_class for thing_class in thing_classes if obj_class.startswith(thing_class)]
                 
@@ -70,29 +79,24 @@ def load_filtered_sdac_dataset(name, dirname, thing_classes):
                     category_id = thing_classes.index(probable_class)
 
                     if is_shots and shot_count.get(category_id, 0) >= shots:
-                        continue
+                        break
 
                     shot_count[category_id] = shot_count.get(category_id, 0) + 1
+                    # Add bounding box to data
+                    bboxes.append(
+                        {
+                            "category_id": category_id,
+                            "bbox": [xmin, ymin, xmax, ymax],
+                            "bbox_mode": BoxMode.XYXY_ABS,
+                        }
+                    )
+            if not bboxes:
+                pass
 
-                    bbox = {
-                        "category_id": category_id,
-                        "bbox": [xmin, ymin, xmax, ymax],
-                        "bbox_mode": BoxMode.XYXY_ABS,
-                    }
+            annotation['annotations'] = bboxes
+            data.append(annotation)
 
-                    annotation = {
-                        "file_name": os.path.join(images_dir, img_filename),
-                        "image_id": filename,
-                        "width": int(root.findall("./size/width")[0].text),
-                        "height": int(root.findall("./size/height")[0].text),
-                        "id": len(data),
-                        "annotations": [bbox],
-                    }
-                    data.append(annotation)
-
-            image_count += 1
-
-            if image_count >= image_limit and image_limit != -1:
+            if len(data) >= image_limit and image_limit != -1:
                 break
     return data
 
