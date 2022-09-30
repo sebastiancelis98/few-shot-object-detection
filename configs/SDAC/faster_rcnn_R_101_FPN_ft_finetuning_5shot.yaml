@@ -1,0 +1,28 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "checkpoints/sdac/faster_rcnn_R_101_FPN_ft_normalized_base"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 39
+    OUTPUT_LAYER: "CosineSimOutputLayers"
+    FREEZE_FEAT: True
+  BACKBONE:
+    FREEZE: True
+  PROPOSAL_GENERATOR:
+    FREEZE: True
+INPUT:
+  MIN_SIZE_TRAIN: (480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800)
+  MIN_SIZE_TEST: 800
+DATASETS:
+  TRAIN: ('sdac_train_all_5shot',)
+  TEST: ('sdac_test_novel',)
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  STEPS: (36000, )
+  MAX_ITER: 40000
+  CHECKPOINT_PERIOD: 40000
+  WARMUP_ITERS: 10
+OUTPUT_DIR: "checkpoints/sdac/5shot_finetuned"

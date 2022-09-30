@@ -16,7 +16,7 @@ SOLVER:
   IMS_PER_BATCH: 8
   BASE_LR: 0.001
   STEPS: (36000, )
-  MAX_ITER: 50000
-  CHECKPOINT_PERIOD: 25000
+  MAX_ITER: 100000
+  CHECKPOINT_PERIOD: 50000
   WARMUP_ITERS: 10
-OUTPUT_DIR: "checkpoints/sdac/base_v03/"
+OUTPUT_DIR: "checkpoints/sdac/base_v05_random_split/"
