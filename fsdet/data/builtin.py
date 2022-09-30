@@ -218,7 +218,7 @@ def register_all_pascal_voc(root="datasets"):
         ("voc_2012_trainval_all3", "VOC2012", "trainval", "base_novel_3", 3),
         ("voc_2007_test_base1", "VOC2007", "test", "base1", 1),
         ("voc_2007_test_base2", "VOC2007", "test", "base2", 2),
-        ("voc_2007_test_base3", "VOC2007", "test", "base3", 3),
+        ("voc_2012_test_base3", "VOC2012", "val", "base3", 3),
         ("voc_2007_test_novel1", "VOC2007", "test", "novel1", 1),
         ("voc_2007_test_novel2", "VOC2007", "test", "novel2", 2),
         ("voc_2007_test_novel3", "VOC2007", "test", "novel3", 3),
@@ -269,18 +269,18 @@ def register_all_pascal_voc(root="datasets"):
 def register_all_sdac_datasets(root="datasets/sdac"):
     
     METASPLITS = [
-        ("sdac_train_10images_all", "small_img", "train", "base_novel"),
-        ("sdac_train_10images_base", "small_img", "train", "base"),
-        ("sdac_train_10images_novel", "small_img", "train", "novel"),
+        ("sdac_train_10images_all", "base_train", "train", "base_novel"),
+        ("sdac_train_10images_base", "base_train", "train", "base"),
+        ("sdac_train_10images_novel", "base_train", "train", "novel"),
 
-        ("sdac_train_all", "small_img", "train", "base_novel"),
-        ("sdac_test_all", "small_img_test", "test", "base_novel"),
-
-        ("sdac_train_base", "small_img", "train", "base"),
-        ("sdac_test_base", "small_img_test", "test", "base"),
+        ("sdac_train_base", "base_train", "train", "base"),
+        ("sdac_test_base", "base_test", "test", "base"),
         
-        ("sdac_train_all_1shot", "small_img", "train", "base_novel"),
-        ("sdac_test_novel", "small_img_test", "test", "novel"),
+        ("sdac_train_all_1shot", "all_train_1_shot", "train", "base_novel"),
+        ("sdac_train_all_2shot", "all_train_2_shot", "train", "base_novel"),
+        ("sdac_train_all_5shot", "all_train_5_shot", "train", "base_novel"),
+        ("sdac_train_all_10shot", "all_train_10_shot", "train", "base_novel"),
+        ("sdac_test_all", "all_test", "test", "base_novel"),
     ]
 
     for name, dirname, split, keepclasses in METASPLITS:

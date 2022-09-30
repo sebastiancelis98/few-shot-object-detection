@@ -375,17 +375,60 @@ PASCAL_VOC_BASE_CATEGORIES = {
     ],
 }
 
-SDAC_BASE_CLASSES = ["ASR_Ansaugoeffnung", "ASR_Ansaugrauchmelder", "Ambulanz_Pendelleuchte_LED", "Aufbaurundleuchte_LED_Treppenhaus", "Ausschalter", "Ausschalter_beleuchtet", "Buero_Pendelleuchten_LED",
+SDAC_BASE_CLASSES_old = ["ASR_Ansaugoeffnung", "ASR_Ansaugrauchmelder", "Ambulanz_Pendelleuchte_LED", "Aufbaurundleuchte_LED_Treppenhaus", "Ausschalter", "Ausschalter_beleuchtet", "Buero_Pendelleuchten_LED",
     "CEE_Drehstrom_Steckdose_16_32_A", "DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm", "Datenanschluss_einfach", "Datenanschluss_zweifach", "Downlight_LED_Einbauleuchten_Flur",
     "Downlight_LED_Einbauleuchten_Flur_2", "Einbaudownlights_LED_Konferenzraeume", "Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V", "Elektroanschluss_allgemein_400V_Geraeteanschlussdose_400V",
     "Fluchtwegpiktogramm", "Gegensprechanlage_mit_Video", "KFO_Kamera_mit_Festobjektiv", "NAM-Nichtautomatischer_Melder", "Notlichtbaustein_in_Allgemeinbeleuchtug_engebaut_Einbau_(1UG_und_2UG_Aufbauvariante)",
     "OKW_Multisensormelder_(Kombination_optischer_Rauch-Kahlenmonoxid_Waerme-Melder)", "OT_Multisensormelder_(Kombination_RMO_WMD)", "RMO_Rauchmelder_optischer", "ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)"]
 
-SDAC_NOVEL_CLASSES = [
+SDAC_NOVEL_CLASSES_old = [
     
     "Ruf-und_Abstelltaster", "Scheinwerfer_fuer_Alarmbeleuchtung", "Schukosteckdose_einfach", "Schukosteckdose_mehrfach", "Serienschalter", "Sicherheitsleuchte_Wandeinbau", "Taster", "Taster_beleuchtet",
     "WLAN", "Wechselschalter", "ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm", "Zentrale_Sicherheitsbeleuchtung", "Zimmersignalleuchte", "Zugtaster"
 ]
+
+### random
+SDAC_BASE_CLASSES = ['Zimmersignalleuchte',
+                    'Ambulanz_Pendelleuchte_LED',
+                    'Downlight_LED_Einbauleuchten_Flur',
+                    'ASR_Ansaugrauchmelder',
+                    'Datenanschluss_einfach',
+                    'Ausschalter_beleuchtet',
+                    'Gegensprechanlage_mit_Video',
+                    'ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm',
+                    'Schukosteckdose_einfach',
+                    'RMO_Rauchmelder_optischer',
+                    'KFO_Kamera_mit_Festobjektiv',
+                    'Taster_beleuchtet',
+                    'OT_Multisensormelder_(Kombination_RMO_WMD)',
+                    'OKW_Multisensormelder_(Kombination_optischer_Rauch-Kahlenmonoxid_Waerme-Melder)',
+                    'WLAN',
+                    'Datenanschluss_zweifach',
+                    'Scheinwerfer_fuer_Alarmbeleuchtung',
+                    'Wechselschalter',
+                    'Zugtaster',
+                    'Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V',
+                    'ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)',
+                    'NAM-Nichtautomatischer_Melder',
+                    'Einbaudownlights_LED_Konferenzraeume',
+                    'Serienschalter',
+                    'ASR_Ansaugoeffnung']
+
+SDAC_NOVEL_CLASSES = ['Elektroanschluss_allgemein_400V_Geraeteanschlussdose_400V',
+                    'Aufbaurundleuchte_LED_Treppenhaus',
+                    'Buero_Pendelleuchten_LED',
+                    'Ruf-und_Abstelltaster',
+                    'Downlight_LED_Einbauleuchten_Flur_2',
+                    'Notlichtbaustein_in_Allgemeinbeleuchtug_engebaut_Einbau_(1UG_und_2UG_Aufbauvariante)',
+                    'Sicherheitsleuchte_Wandeinbau',
+                    'Schukosteckdose_mehrfach',
+                    'Taster',
+                    'CEE_Drehstrom_Steckdose_16_32_A',
+                    'Fluchtwegpiktogramm',
+                    'Ausschalter',
+                    'Zentrale_Sicherheitsbeleuchtung',
+                    'DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm']
+
 
 SDAC_ALL_CLASSES = SDAC_BASE_CLASSES + SDAC_NOVEL_CLASSES
 
