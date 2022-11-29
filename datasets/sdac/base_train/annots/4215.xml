@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>4215.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/4215.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>RMO_Rauchmelder_optischer</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>793</xmin>
+			<ymin>483</ymin>
+			<xmax>849</xmax>
+			<ymax>539</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Scheinwerfer_fuer_Alarmbeleuchtung</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>218</xmin>
+			<ymin>549</ymin>
+			<xmax>443</xmax>
+			<ymax>813</ymax>
+		</bndbox>
+	</object>
+</annotation>

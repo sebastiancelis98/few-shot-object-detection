@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>1350.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/1350.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>WLAN</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>714</xmin>
+			<ymin>165</ymin>
+			<xmax>766</xmax>
+			<ymax>217</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Downlight_LED_Einbauleuchten_Flur</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>448</xmin>
+			<ymin>854</ymin>
+			<xmax>524</xmax>
+			<ymax>920</ymax>
+		</bndbox>
+	</object>
+</annotation>

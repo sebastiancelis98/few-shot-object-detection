@@ -23,7 +23,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>Zimmersignalleuchte_transparent</name>
+		<name>Zimmersignalleuchte</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>
@@ -34,7 +34,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>Schukosteckdose_einfach_transparent</name>
+		<name>Schukosteckdose_einfach</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>

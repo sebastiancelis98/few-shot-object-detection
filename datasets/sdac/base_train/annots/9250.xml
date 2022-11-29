@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>9250.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/9250.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Zimmersignalleuchte</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>476</xmin>
+			<ymin>306</ymin>
+			<xmax>608</xmax>
+			<ymax>440</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Zimmersignalleuchte</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>171</xmin>
+			<ymin>285</ymin>
+			<xmax>371</xmax>
+			<ymax>481</ymax>
+		</bndbox>
+	</object>
+</annotation>

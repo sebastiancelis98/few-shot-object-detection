@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>3702.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/3702.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Downlight_LED_Einbauleuchten_Flur</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>925</xmin>
+			<ymin>597</ymin>
+			<xmax>995</xmax>
+			<ymax>651</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Serienschalter</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>208</xmin>
+			<ymin>313</ymin>
+			<xmax>394</xmax>
+			<ymax>503</ymax>
+		</bndbox>
+	</object>
+</annotation>

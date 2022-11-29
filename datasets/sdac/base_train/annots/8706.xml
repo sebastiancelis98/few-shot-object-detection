@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>8706.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/8706.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Taster_beleuchtet</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>534</xmin>
+			<ymin>385</ymin>
+			<xmax>600</xmax>
+			<ymax>451</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Datenanschluss_zweifach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>696</xmin>
+			<ymin>207</ymin>
+			<xmax>747</xmax>
+			<ymax>241</ymax>
+		</bndbox>
+	</object>
+</annotation>

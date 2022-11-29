@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>5644.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/5644.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>KFO_Kamera_mit_Festobjektiv</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>585</xmin>
+			<ymin>685</ymin>
+			<xmax>662</xmax>
+			<ymax>776</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Scheinwerfer_fuer_Alarmbeleuchtung</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>624</xmin>
+			<ymin>399</ymin>
+			<xmax>972</xmax>
+			<ymax>744</ymax>
+		</bndbox>
+	</object>
+</annotation>

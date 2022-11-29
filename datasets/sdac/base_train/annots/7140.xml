@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7140.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7140.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>158</xmin>
+			<ymin>284</ymin>
+			<xmax>214</xmax>
+			<ymax>340</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>NAM-Nichtautomatischer_Melder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>568</xmin>
+			<ymin>576</ymin>
+			<xmax>700</xmax>
+			<ymax>708</ymax>
+		</bndbox>
+	</object>
+</annotation>

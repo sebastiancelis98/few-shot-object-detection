@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7237.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7237.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ASR_Ansaugrauchmelder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>766</xmin>
+			<ymin>128</ymin>
+			<xmax>891</xmax>
+			<ymax>253</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Einbaudownlights_LED_Konferenzraeume</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>212</xmin>
+			<ymin>531</ymin>
+			<xmax>420</xmax>
+			<ymax>831</ymax>
+		</bndbox>
+	</object>
+</annotation>

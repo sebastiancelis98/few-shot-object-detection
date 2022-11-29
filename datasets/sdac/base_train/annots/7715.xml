@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7715.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7715.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>WLAN</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>393</xmin>
+			<ymin>718</ymin>
+			<xmax>498</xmax>
+			<ymax>822</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Scheinwerfer_fuer_Alarmbeleuchtung</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>470</xmin>
+			<ymin>147</ymin>
+			<xmax>582</xmax>
+			<ymax>279</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>619.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/619.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Taster_beleuchtet</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>717</xmin>
+			<ymin>84</ymin>
+			<xmax>783</xmax>
+			<ymax>150</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Datenanschluss_einfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>474</xmin>
+			<ymin>361</ymin>
+			<xmax>543</xmax>
+			<ymax>461</ymax>
+		</bndbox>
+	</object>
+</annotation>

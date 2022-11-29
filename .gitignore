@@ -28,6 +28,7 @@ datasets/VOC2012
 datasets/vocsplit
 datasets/lvis
 datasets/lvissplit
+datasets/sdac
 datasets/*/seed*
 
 # configs

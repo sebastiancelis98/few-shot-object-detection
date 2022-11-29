@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7505.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7505.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>RMO_Rauchmelder_optischer</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>422</xmin>
+			<ymin>784</ymin>
+			<xmax>535</xmax>
+			<ymax>897</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>NAM-Nichtautomatischer_Melder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>345</xmin>
+			<ymin>620</ymin>
+			<xmax>460</xmax>
+			<ymax>735</ymax>
+		</bndbox>
+	</object>
+</annotation>

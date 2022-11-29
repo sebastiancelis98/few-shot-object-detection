@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>542.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/542.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Downlight_LED_Einbauleuchten_Flur</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>918</xmin>
+			<ymin>545</ymin>
+			<xmax>964</xmax>
+			<ymax>609</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>OKW_Multisensormelder_(Kombination_optischer_Rauch-Kahlenmonoxid_Waerme-Melder)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>692</xmin>
+			<ymin>896</ymin>
+			<xmax>764</xmax>
+			<ymax>968</ymax>
+		</bndbox>
+	</object>
+</annotation>

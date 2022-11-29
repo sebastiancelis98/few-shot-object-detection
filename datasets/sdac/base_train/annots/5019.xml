@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>5019.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/5019.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>90</xmin>
+			<ymin>315</ymin>
+			<xmax>203</xmax>
+			<ymax>428</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>840</xmin>
+			<ymin>254</ymin>
+			<xmax>939</xmax>
+			<ymax>348</ymax>
+		</bndbox>
+	</object>
+</annotation>

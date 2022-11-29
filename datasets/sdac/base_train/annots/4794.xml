@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>4794.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/4794.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Gegensprechanlage_mit_Video</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>545</xmin>
+			<ymin>335</ymin>
+			<xmax>721</xmax>
+			<ymax>430</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>OT_Multisensormelder_(Kombination_RMO_WMD)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>698</xmin>
+			<ymin>551</ymin>
+			<xmax>845</xmax>
+			<ymax>698</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -280,7 +280,7 @@ def register_all_sdac_datasets(root="datasets/sdac"):
         ("sdac_train_all_2shot", "all_train_2_shot", "train", "base_novel"),
         ("sdac_train_all_5shot", "all_train_5_shot", "train", "base_novel"),
         ("sdac_train_all_10shot", "all_train_10_shot", "train", "base_novel"),
-        ("sdac_test_all", "all_test", "test", "base_novel"),
+        ("sdac_test_all", "validation", "test", "base_novel"),
     ]
 
     for name, dirname, split, keepclasses in METASPLITS:

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7088.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7088.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Zugtaster</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>346</xmin>
+			<ymin>893</ymin>
+			<xmax>418</xmax>
+			<ymax>1015</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Scheinwerfer_fuer_Alarmbeleuchtung</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>141</xmin>
+			<ymin>268</ymin>
+			<xmax>485</xmax>
+			<ymax>615</ymax>
+		</bndbox>
+	</object>
+</annotation>

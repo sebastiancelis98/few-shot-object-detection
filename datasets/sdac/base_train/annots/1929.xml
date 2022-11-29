@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>1929.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/1929.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>NAM-Nichtautomatischer_Melder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>281</xmin>
+			<ymin>714</ymin>
+			<xmax>465</xmax>
+			<ymax>898</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Zugtaster</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>627</xmin>
+			<ymin>876</ymin>
+			<xmax>749</xmax>
+			<ymax>948</ymax>
+		</bndbox>
+	</object>
+</annotation>

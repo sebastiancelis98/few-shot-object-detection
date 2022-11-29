@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>8649.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/8649.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Gegensprechanlage_mit_Video</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>66</xmin>
+			<ymin>466</ymin>
+			<xmax>161</xmax>
+			<ymax>642</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Einbaudownlights_LED_Konferenzraeume</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>703</xmin>
+			<ymin>291</ymin>
+			<xmax>807</xmax>
+			<ymax>441</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>8305.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/8305.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Scheinwerfer_fuer_Alarmbeleuchtung</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>617</xmin>
+			<ymin>584</ymin>
+			<xmax>767</xmax>
+			<ymax>718</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Serienschalter</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>76</xmin>
+			<ymin>420</ymin>
+			<xmax>168</xmax>
+			<ymax>516</ymax>
+		</bndbox>
+	</object>
+</annotation>

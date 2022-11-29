@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>6026.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/6026.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ASR_Ansaugrauchmelder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>624</xmin>
+			<ymin>581</ymin>
+			<xmax>686</xmax>
+			<ymax>643</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ASR_Ansaugrauchmelder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>56</xmin>
+			<ymin>405</ymin>
+			<xmax>181</xmax>
+			<ymax>530</ymax>
+		</bndbox>
+	</object>
+</annotation>

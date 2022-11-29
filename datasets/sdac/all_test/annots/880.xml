@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>880.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/880.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Datenanschluss_einfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>704</xmin>
+			<ymin>235</ymin>
+			<xmax>754</xmax>
+			<ymax>295</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Downlight_LED_Einbauleuchten_Flur</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>206</xmin>
+			<ymin>381</ymin>
+			<xmax>252</xmax>
+			<ymax>445</ymax>
+		</bndbox>
+	</object>
+</annotation>

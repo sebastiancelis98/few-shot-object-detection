@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>6898.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/6898.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>NAM-Nichtautomatischer_Melder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>622</xmin>
+			<ymin>493</ymin>
+			<xmax>783</xmax>
+			<ymax>654</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Datenanschluss_zweifach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>563</xmin>
+			<ymin>288</ymin>
+			<xmax>666</xmax>
+			<ymax>357</ymax>
+		</bndbox>
+	</object>
+</annotation>

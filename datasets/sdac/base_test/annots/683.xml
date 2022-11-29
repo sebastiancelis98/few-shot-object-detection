@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>683.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/683.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Gegensprechanlage_mit_Video</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>65</xmin>
+			<ymin>617</ymin>
+			<xmax>246</xmax>
+			<ymax>719</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Serienschalter</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>754</xmin>
+			<ymin>749</ymin>
+			<xmax>850</xmax>
+			<ymax>917</ymax>
+		</bndbox>
+	</object>
+</annotation>

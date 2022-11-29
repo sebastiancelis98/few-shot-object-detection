@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>3211.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/3211.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ASR_Ansaugrauchmelder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>871</xmin>
+			<ymin>113</ymin>
+			<xmax>933</xmax>
+			<ymax>175</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Taster_beleuchtet</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>765</xmin>
+			<ymin>855</ymin>
+			<xmax>831</xmax>
+			<ymax>921</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>1832.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/1832.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>623</xmin>
+			<ymin>169</ymin>
+			<xmax>697</xmax>
+			<ymax>226</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Downlight_LED_Einbauleuchten_Flur</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>74</xmin>
+			<ymin>497</ymin>
+			<xmax>152</xmax>
+			<ymax>565</ymax>
+		</bndbox>
+	</object>
+</annotation>

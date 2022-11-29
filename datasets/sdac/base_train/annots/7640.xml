@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7640.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7640.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ASR_Ansaugrauchmelder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>297</xmin>
+			<ymin>159</ymin>
+			<xmax>422</xmax>
+			<ymax>284</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>772</xmin>
+			<ymin>671</ymin>
+			<xmax>885</xmax>
+			<ymax>784</ymax>
+		</bndbox>
+	</object>
+</annotation>

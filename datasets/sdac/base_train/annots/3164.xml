@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>3164.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/3164.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Ambulanz_Pendelleuchte_LED</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>441</xmin>
+			<ymin>93</ymin>
+			<xmax>828</xmax>
+			<ymax>149</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Schukosteckdose_einfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>679</xmin>
+			<ymin>350</ymin>
+			<xmax>722</xmax>
+			<ymax>400</ymax>
+		</bndbox>
+	</object>
+</annotation>

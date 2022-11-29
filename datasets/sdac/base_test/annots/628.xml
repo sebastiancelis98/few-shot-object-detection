@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>628.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/628.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Wechselschalter</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>223</xmin>
+			<ymin>852</ymin>
+			<xmax>295</xmax>
+			<ymax>930</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>618</xmin>
+			<ymin>384</ymin>
+			<xmax>674</xmax>
+			<ymax>440</ymax>
+		</bndbox>
+	</object>
+</annotation>

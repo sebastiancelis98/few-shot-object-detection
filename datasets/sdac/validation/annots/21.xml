@@ -23,7 +23,7 @@
 		</bndbox>
 	</object>
 	<object>
-		<name>Sicherheitsleuchte_Wandeinbau_transparent</name>
+		<name>Sicherheitsleuchte_Wandeinbau</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>

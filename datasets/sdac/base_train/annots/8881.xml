@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>8881.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/8881.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>167</xmin>
+			<ymin>759</ymin>
+			<xmax>214</xmax>
+			<ymax>808</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>RMO_Rauchmelder_optischer</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>534</xmin>
+			<ymin>815</ymin>
+			<xmax>596</xmax>
+			<ymax>877</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>4742.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/4742.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Schukosteckdose_einfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>316</xmin>
+			<ymin>248</ymin>
+			<xmax>366</xmax>
+			<ymax>291</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ASR_Ansaugoeffnung</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>394</xmin>
+			<ymin>896</ymin>
+			<xmax>470</xmax>
+			<ymax>1024</ymax>
+		</bndbox>
+	</object>
+</annotation>

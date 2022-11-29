@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>6654.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/6654.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>NAM-Nichtautomatischer_Melder</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>429</xmin>
+			<ymin>137</ymin>
+			<xmax>521</xmax>
+			<ymax>229</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>861</xmin>
+			<ymin>145</ymin>
+			<xmax>960</xmax>
+			<ymax>239</ymax>
+		</bndbox>
+	</object>
+</annotation>

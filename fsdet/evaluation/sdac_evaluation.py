@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 import numpy as np
 import torch
 import logging
+import cv2
+import json
 
 from functools import lru_cache
 from collections import OrderedDict, defaultdict
@@ -11,6 +13,25 @@ from detectron2.data import DatasetCatalog, MetadataCatalog
 from detectron2.utils import comm
 
 from fsdet.evaluation.evaluator import DatasetEvaluator
+
+@lru_cache(maxsize=None)
+def parse_rec(filename):
+    """Parse a SDAC xml file."""
+    tree = ET.parse(filename)
+    objects = []
+    for obj in tree.findall("object"):
+        obj_struct = {}
+        obj_struct["name"] = obj.find("name").text
+        bbox = obj.find("bndbox")
+        obj_struct["bbox"] = [
+            int(bbox.find("xmin").text),
+            int(bbox.find("ymin").text),
+            int(bbox.find("xmax").text),
+            int(bbox.find("ymax").text),
+        ]
+        objects.append(obj_struct)
+
+    return objects
 
 class SDACEvaluator(DatasetEvaluator):
     def __init__(self, dataset_name): # initial needed variables
@@ -31,25 +52,61 @@ class SDACEvaluator(DatasetEvaluator):
         )
 
     def process(self, inputs, outputs): # prepare predictions for evaluation
+        debug = True
         for input, output in zip(inputs, outputs):
-            image_id = input["image_id"]
+            annotation_file_id = input["image_id"]
             instances = output["instances"].to(self._cpu_device)
             boxes = instances.pred_boxes.tensor.numpy()
             scores = instances.scores.tolist()
             classes = instances.pred_classes.tolist()
-            for box, score, cls in zip(boxes, scores, classes):
+
+            img_name = annotation_file_id.split(".")[0] + ".jpg"
+            img_path = os.path.join(self._base_images_directory, img_name)
+            if not os.path.exists(img_path):
+                self._logger.warning(f"{img_path} not found")
+                continue
+            if debug:
+                img = cv2.imread(img_path)
+                print(f'img_path: {img_path}')
+
+            for box, score, clss in zip(boxes, scores, classes):
                 xmin, ymin, xmax, ymax = box
                 # The inverse of data loading logic in `datasets/pascal_voc.py`
                 xmin += 1
                 ymin += 1
-                self._predictions[cls].append(
-                    f"{image_id} {score:.3f} {xmin:.1f} {ymin:.1f} {xmax:.1f} {ymax:.1f}"
+                self._predictions[clss].append(
+                    f"{annotation_file_id} {score:.3f} {xmin:.1f} {ymin:.1f} {xmax:.1f} {ymax:.1f}"
                 )
+                if score < 0.5:
+                    continue
+                
+                if debug:
+                    #print(f"{self._base_classes[clss]} at {(int(xmin), int(ymin))} {(int(xmax), int(ymax))} with score {score * 100:.2f}%")
+                    cv2.rectangle(img, (int(xmin), int(ymin)), (int(xmax), int(ymax)), (0, 255, 0), 1)
+                    cv2.putText(img, f"{self._class_names[clss]}", (int(xmin), int(ymax) + 25),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (50, 50, 200), 1, cv2.LINE_AA)
+
+            if debug:
+                gt_objects = parse_rec(os.path.join(self._base_annotations_directory, annotation_file_id))
+                for gt_object in gt_objects:
+                    gt_bbox = gt_object["bbox"]
+
+                    gt_xmin, gt_ymin, gt_xmax, gt_ymax = gt_bbox
+                    cv2.putText(img, f"{gt_object['name']}", (int(gt_xmin), int(gt_ymin)),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)                    
+
+                cv2.imwrite(os.path.join("output", img_name), img)
+                print(f"Saved {os.path.join('output', img_name)}")
+            
 
     def evaluate(self):
         all_predictions = comm.gather(self._predictions, dst=0)
         if not comm.is_main_process():
             return
+
+        with open("output/predictions.json", "w") as f:
+            json.dump(all_predictions, f, indent=4)
+            
         predictions = defaultdict(list)
         for predictions_per_rank in all_predictions:
             for clsid, lines in predictions_per_rank.items():
@@ -148,25 +205,6 @@ class SDACEvaluator(DatasetEvaluator):
 # Written by Bharath Hariharan
 # --------------------------------------------------------
 
-
-@lru_cache(maxsize=None)
-def parse_rec(filename):
-    """Parse a SDAC xml file."""
-    tree = ET.parse(filename)
-    objects = []
-    for obj in tree.findall("object"):
-        obj_struct = {}
-        obj_struct["name"] = obj.find("name").text
-        bbox = obj.find("bndbox")
-        obj_struct["bbox"] = [
-            int(bbox.find("xmin").text),
-            int(bbox.find("ymin").text),
-            int(bbox.find("xmax").text),
-            int(bbox.find("ymax").text),
-        ]
-        objects.append(obj_struct)
-
-    return objects
 
 def sdac_ap(rec, prec) -> float:
 

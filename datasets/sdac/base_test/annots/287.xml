@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>287.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/287.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>RMO_Rauchmelder_optischer</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>222</xmin>
+			<ymin>597</ymin>
+			<xmax>278</xmax>
+			<ymax>653</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>804</xmin>
+			<ymin>531</ymin>
+			<xmax>953</xmax>
+			<ymax>645</ymax>
+		</bndbox>
+	</object>
+</annotation>

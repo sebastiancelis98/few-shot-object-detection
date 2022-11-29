@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>38.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/38.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>OT_Multisensormelder_(Kombination_RMO_WMD)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>529</xmin>
+			<ymin>421</ymin>
+			<xmax>642</xmax>
+			<ymax>534</ymax>
+		</bndbox>
+	</object>
+</annotation>

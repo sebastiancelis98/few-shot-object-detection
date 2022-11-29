@@ -12,7 +12,7 @@
 		<depth>3</depth>
 	</size>
 	<object>
-		<name>Sicherheitsleuchte_Wandeinbau_transparent</name>
+		<name>Sicherheitsleuchte_Wandeinbau</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>

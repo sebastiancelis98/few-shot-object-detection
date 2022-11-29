@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>5931.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/5931.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Ambulanz_Pendelleuchte_LED</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>282</xmin>
+			<ymin>398</ymin>
+			<xmax>338</xmax>
+			<ymax>785</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Ambulanz_Pendelleuchte_LED</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>173</xmin>
+			<ymin>719</ymin>
+			<xmax>567</xmax>
+			<ymax>1024</ymax>
+		</bndbox>
+	</object>
+</annotation>

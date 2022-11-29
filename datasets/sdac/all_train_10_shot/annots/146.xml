@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>146.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/146.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Zugtaster</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>690</xmin>
+			<ymin>461</ymin>
+			<xmax>934</xmax>
+			<ymax>605</ymax>
+		</bndbox>
+	</object>
+</annotation>

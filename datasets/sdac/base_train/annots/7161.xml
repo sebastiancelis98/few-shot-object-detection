@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7161.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7161.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>KFO_Kamera_mit_Festobjektiv</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>517</xmin>
+			<ymin>655</ymin>
+			<xmax>594</xmax>
+			<ymax>746</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Gegensprechanlage_mit_Video</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>708</xmin>
+			<ymin>157</ymin>
+			<xmax>889</xmax>
+			<ymax>357</ymax>
+		</bndbox>
+	</object>
+</annotation>

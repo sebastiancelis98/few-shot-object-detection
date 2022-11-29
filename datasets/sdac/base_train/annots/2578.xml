@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>2578.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/2578.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Ambulanz_Pendelleuchte_LED</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>55</xmin>
+			<ymin>819</ymin>
+			<xmax>339</xmax>
+			<ymax>1024</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Wechselschalter</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>367</xmin>
+			<ymin>236</ymin>
+			<xmax>445</xmax>
+			<ymax>308</ymax>
+		</bndbox>
+	</object>
+</annotation>

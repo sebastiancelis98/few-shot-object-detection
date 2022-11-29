@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>655.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/655.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Fluchtwegpiktogramm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>274</xmin>
+			<ymin>182</ymin>
+			<xmax>347</xmax>
+			<ymax>286</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Fluchtwegpiktogramm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>558</xmin>
+			<ymin>424</ymin>
+			<xmax>801</xmax>
+			<ymax>626</ymax>
+		</bndbox>
+	</object>
+</annotation>

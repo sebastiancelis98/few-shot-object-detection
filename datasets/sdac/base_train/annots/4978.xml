@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>4978.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/4978.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>KFO_Kamera_mit_Festobjektiv</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>535</xmin>
+			<ymin>625</ymin>
+			<xmax>717</xmax>
+			<ymax>779</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ROA_Rauchmelder_optisch_mit_Signalgeber_(Sockelsirene)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>779</xmin>
+			<ymin>595</ymin>
+			<xmax>835</xmax>
+			<ymax>651</ymax>
+		</bndbox>
+	</object>
+</annotation>

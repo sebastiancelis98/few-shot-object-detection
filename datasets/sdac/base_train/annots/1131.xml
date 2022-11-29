@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>1131.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/1131.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Einbaudownlights_LED_Konferenzraeume</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>667</xmin>
+			<ymin>258</ymin>
+			<xmax>967</xmax>
+			<ymax>466</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Elektroanschluss_allgemein_230V_Geraeteanschlussdose_230V</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>599</xmin>
+			<ymin>604</ymin>
+			<xmax>698</xmax>
+			<ymax>698</ymax>
+		</bndbox>
+	</object>
+</annotation>

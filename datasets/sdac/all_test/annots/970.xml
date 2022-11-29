@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>970.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/970.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Sicherheitsleuchte_Wandeinbau</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>462</xmin>
+			<ymin>607</ymin>
+			<xmax>621</xmax>
+			<ymax>632</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Schukosteckdose_mehrfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>339</xmin>
+			<ymin>676</ymin>
+			<xmax>383</xmax>
+			<ymax>736</ymax>
+		</bndbox>
+	</object>
+</annotation>

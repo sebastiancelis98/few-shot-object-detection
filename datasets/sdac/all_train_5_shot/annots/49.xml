@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>49.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/49.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Sicherheitsleuchte_Wandeinbau</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>380</xmin>
+			<ymin>402</ymin>
+			<xmax>460</xmax>
+			<ymax>427</ymax>
+		</bndbox>
+	</object>
+</annotation>

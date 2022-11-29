@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>97.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/97.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Aufbaurundleuchte_LED_Treppenhaus</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>283</xmin>
+			<ymin>551</ymin>
+			<xmax>526</xmax>
+			<ymax>756</ymax>
+		</bndbox>
+	</object>
+</annotation>

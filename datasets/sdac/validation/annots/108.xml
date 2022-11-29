@@ -12,7 +12,7 @@
 		<depth>3</depth>
 	</size>
 	<object>
-		<name>Zentrale_Sicherheitsbeleuchtung_transparent</name>
+		<name>Zentrale_Sicherheitsbeleuchtung</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>

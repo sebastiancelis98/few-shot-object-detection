@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>7342.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/7342.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>OT_Multisensormelder_(Kombination_RMO_WMD)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>736</xmin>
+			<ymin>131</ymin>
+			<xmax>867</xmax>
+			<ymax>262</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>537</xmin>
+			<ymin>514</ymin>
+			<xmax>686</xmax>
+			<ymax>628</ymax>
+		</bndbox>
+	</object>
+</annotation>

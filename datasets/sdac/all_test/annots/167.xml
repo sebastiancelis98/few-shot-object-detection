@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>167.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/167.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>147</xmin>
+			<ymin>226</ymin>
+			<xmax>261</xmax>
+			<ymax>375</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>288</xmin>
+			<ymin>880</ymin>
+			<xmax>345</xmax>
+			<ymax>954</ymax>
+		</bndbox>
+	</object>
+</annotation>

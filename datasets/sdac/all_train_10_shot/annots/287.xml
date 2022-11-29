@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>287.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/287.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Ruf-und_Abstelltaster</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>346</xmin>
+			<ymin>219</ymin>
+			<xmax>574</xmax>
+			<ymax>357</ymax>
+		</bndbox>
+	</object>
+</annotation>

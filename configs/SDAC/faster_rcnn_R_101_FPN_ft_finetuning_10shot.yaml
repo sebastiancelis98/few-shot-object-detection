@@ -17,7 +17,7 @@ INPUT:
   MIN_SIZE_TEST: 800
 DATASETS:
   TRAIN: ('sdac_train_all_10shot',)
-  TEST: ('sdac_test_novel',)
+  TEST: ('sdac_test_all',)
 SOLVER:
   IMS_PER_BATCH: 16
   BASE_LR: 0.001

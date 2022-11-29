@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>14.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/14.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Schukosteckdose_einfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>59</xmin>
+			<ymin>373</ymin>
+			<xmax>109</xmax>
+			<ymax>416</ymax>
+		</bndbox>
+	</object>
+</annotation>

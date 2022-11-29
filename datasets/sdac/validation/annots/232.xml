@@ -12,7 +12,7 @@
 		<depth>3</depth>
 	</size>
 	<object>
-		<name>ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm_transparent</name>
+		<name>ZD_Melder_in_Zwischendecke_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>

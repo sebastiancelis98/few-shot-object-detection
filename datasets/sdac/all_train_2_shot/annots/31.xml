@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>31.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/31.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>CEE_Drehstrom_Steckdose_16_32_A</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>100</xmin>
+			<ymin>569</ymin>
+			<xmax>224</xmax>
+			<ymax>701</ymax>
+		</bndbox>
+	</object>
+</annotation>

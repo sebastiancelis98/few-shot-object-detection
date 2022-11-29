@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>786.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/786.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Notlichtbaustein_in_Allgemeinbeleuchtug_engebaut_Einbau_(1UG_und_2UG_Aufbauvariante)</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>819</xmin>
+			<ymin>167</ymin>
+			<xmax>922</xmax>
+			<ymax>267</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Schukosteckdose_einfach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>454</xmin>
+			<ymin>610</ymin>
+			<xmax>581</xmax>
+			<ymax>732</ymax>
+		</bndbox>
+	</object>
+</annotation>

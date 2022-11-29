@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>81.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/81.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>581</xmin>
+			<ymin>515</ymin>
+			<xmax>655</xmax>
+			<ymax>572</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,25 @@
+<annotation>
+	<folder>training</folder>
+	<filename>16.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/16.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>Datenanschluss_zweifach</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>236</xmin>
+			<ymin>418</ymin>
+			<xmax>287</xmax>
+			<ymax>452</ymax>
+		</bndbox>
+	</object>
+</annotation>

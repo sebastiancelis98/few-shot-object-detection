@@ -1,0 +1,36 @@
+<annotation>
+	<folder>training</folder>
+	<filename>760.jpg</filename>
+	<path>/home/sdac_seminar/sdac_seminar_sose22/dataset/training/images/760.jpg</path>
+	<source>
+		<database>Source</database>
+	</source>
+	<segmented>0</segmented>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>DB_Melder_in_Doppelboden_mit_Revisionsoeffnung_mind_40_x_40_cm</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>842</xmin>
+			<ymin>741</ymin>
+			<xmax>925</xmax>
+			<ymax>809</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Sicherheitsleuchte_Wandeinbau</name>
+		<pose>Front</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>77</xmin>
+			<ymin>327</ymin>
+			<xmax>125</xmax>
+			<ymax>404</ymax>
+		</bndbox>
+	</object>
+</annotation>

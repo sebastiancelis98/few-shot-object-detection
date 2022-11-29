@@ -12,7 +12,7 @@
 		<depth>3</depth>
 	</size>
 	<object>
-		<name>Zimmersignalleuchte_transparent</name>
+		<name>Zimmersignalleuchte</name>
 		<pose>Front</pose>
 		<truncated>0</truncated>
 		<bndbox>
